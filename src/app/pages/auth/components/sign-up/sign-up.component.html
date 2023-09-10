@@ -1,0 +1,51 @@
+<div class="content">
+  <div class="content-photo">
+  </div>
+
+  <div class="content-buttons">
+    <div class="title">
+      <h1 id="title">Sign Up</h1>
+      <label for="title">Sign up for free to access to in any of our products</label>
+    </div>
+    <button class="btn-google">Continue with google</button>
+    <button class="btn-x">Continue with X</button>
+    <div class="divider">
+      <div class="divider-line"></div>
+      <p>OR</p>
+      <div class="divider-line"></div>
+    </div>
+    <form autocomplete="on">
+      <div class="form-element">
+        <label class="form-element__title" for="email">Email Address</label>
+        <input class="form-element__content" id="email" type="text" autocomplete="username">
+        <label class="form-element__footer error-msg" *ngIf="hasError" for="email">{{errorMessage}}</label>
+      </div>
+
+      <div class="form-element">
+        <div class="form-element__title">
+          <label for="password">Password</label>
+          <label for="password" (click)="hidePassword()">Hide</label>
+        </div>
+        <input class="form-element__content" id="password" autocomplete="current-password" [type]="passwordType">
+        <label class="form-element__footer" for="password"><a (click)="forgetPassword()">Use 8 or more characters with a mix of letters, numbers & symbols</a></label>
+      </div>
+
+      <div class="form-element">
+        <div class="form-element__title justify-content-start">
+          <input type="checkbox" id="use-term">
+          <label for="use-term">Agree to our Terms of use and Privacy Policy </label>
+        </div>
+      </div>
+
+      <div class="form-element">
+        <div class="form-element__title justify-content-start">
+          <input type="checkbox" id="subscribe">
+          <label for="use-term">Subscribe to our monthly newsletter</label>
+        </div>
+      </div>
+
+      <button class="signin-button" type="submit" (click)="signUp($event)">Sign Up</button>
+      <p>Already have an  account? <a routerLink="../sign-in">Log in</a></p>
+    </form>
+  </div>
+</div>

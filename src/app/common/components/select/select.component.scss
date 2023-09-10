@@ -1,0 +1,16 @@
+.select {
+  font-family: Causten, serif;
+  font-size: 18px;
+
+  background: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    height: 5px;
+    margin-top: 3px;
+  }
+}

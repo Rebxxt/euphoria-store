@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="content-photo">
+  </div>
+
+  <div class="content-buttons">
+    <div class="title">
+      <h1 id="title">Reset Your Password</h1>
+      <label for="title">Enter your email and we'll send you a link to reset your password.</label>
+      <label for="title">Please  check it.</label>
+    </div>
+
+    <form autocomplete="on">
+      <div class="form-element">
+        <label class="form-element__title" for="email">Email</label>
+        <input class="form-element__content" id="email" type="text" autocomplete="username">
+        <label class="form-element__footer error-msg" *ngIf="hasError" for="email">{{errorMessage}}</label>
+      </div>
+
+      <button class="signin-button" type="submit" (click)="resetPassword($event)">Send</button>
+      <p>Back to <a routerLink="../sign-in">Log in</a></p>
+    </form>
+  </div>
+</div>

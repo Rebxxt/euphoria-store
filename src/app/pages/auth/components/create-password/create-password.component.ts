@@ -22,9 +22,6 @@ export class CreatePasswordComponent implements OnInit {
 
   signUp(event: any) {
     console.log('sign in')
-    this.router.navigate(['auth', 'verification'])
-
-    // event.preventDefault()
   }
 
   forgetPassword() {

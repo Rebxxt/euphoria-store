@@ -1,0 +1,13 @@
+.divider {
+  display: flex;
+  align-items: center;
+  &-line {
+    border: 1px solid rgba(102, 102, 102, 0.25);
+    max-height: 0;
+    width: 100%;
+  }
+  p {
+    text-align: center;
+    width: 8em;
+  }
+}

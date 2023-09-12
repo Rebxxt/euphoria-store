@@ -1,0 +1,13 @@
+:host {
+  section {
+    display: grid;
+    //grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 45% 55%;
+    height: 92vh;
+  }
+
+  .auth-content {
+    overflow: hidden;
+    padding: 5% 15%;
+  }
+}

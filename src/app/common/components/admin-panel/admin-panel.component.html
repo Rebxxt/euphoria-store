@@ -5,8 +5,8 @@
 </div>
 
 <div class="panel" [class.opened]="isOpen">
-  <a routerLink="/auth/sign-in">sign-in</a>
-  <a routerLink="/auth/sign-up">sign-up</a>
+  <p><a routerLink="/auth">auth</a></p>
+  <p><a routerLink="/auth-old">auth-old</a></p>
 </div>
 
 <div class="overlay" *ngIf="isOpen" (click)="onClose()"></div>

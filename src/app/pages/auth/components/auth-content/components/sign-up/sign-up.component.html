@@ -1,0 +1,39 @@
+<div class="auth">
+  <h1 class="auth-title">Sign Up Page</h1>
+
+  <p class="auth-description">Sign up for free to access to in any of our products </p>
+
+  <button appAuthButton>Continue With Google</button>
+
+  <button appAuthButton>Continue With X</button>
+
+  <app-divider></app-divider>
+
+  <app-auth-input
+    label="Email address"
+    type="email"
+    placeholder="designer@gmail.com"
+  ></app-auth-input>
+
+  <app-auth-input
+    label="Password"
+    type="password"
+    [footerTemplate]="footerTemplate"
+  >
+    <ng-template #footerTemplate>
+      <small>Use 8 or more characters with a mix of letters, numbers & symbols</small>
+    </ng-template>
+  </app-auth-input>
+
+  <app-auth-checkbox>
+    <span>Agree to our <a routerLink="/info/terms-of-use">Terms of use</a> and <a routerLink="/info/privacy-policy">Privacy Policy</a></span>
+  </app-auth-checkbox>
+
+  <app-auth-checkbox
+    label="Subscribe to our monthly newsletter"
+  ></app-auth-checkbox>
+
+  <button appAuthButton btnMode="fill" routerLink="../check-email">Sign Up</button>
+
+  <span>Already have an  account? <a routerLink="../sign-in">Log in</a></span>
+</div>

@@ -1,0 +1,30 @@
+<div class="auth">
+  <h1 class="auth-title">Sign In Page</h1>
+
+  <button appAuthButton>Continue With Google</button>
+
+  <button appAuthButton>Continue With X</button>
+
+  <app-divider></app-divider>
+
+  <app-auth-input
+    label="User name or email address"
+    type="email"
+  ></app-auth-input>
+
+  <app-auth-input
+    label="Password"
+    type="password"
+    [footerTemplate]="footerTemplate"
+    footerAlign="end"
+  >
+    <ng-template #footerTemplate>
+      <a routerLink="../reset-password">Forget your password</a>
+    </ng-template>
+  </app-auth-input>
+
+  <button appAuthButton btnMode="fill">Sign In</button>
+
+  <span>Don’t have an account? <a routerLink="../sign-up">Sign up</a></span>
+
+</div>

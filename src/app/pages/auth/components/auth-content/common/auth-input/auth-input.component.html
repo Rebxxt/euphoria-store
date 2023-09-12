@@ -1,0 +1,26 @@
+<div class="form">
+  <div class="form-label">
+    <label
+      *ngIf="label"
+      [for]="label"
+    >{{label}}</label>
+    <label
+      *ngIf="type === 'password'"
+      [for]="label"
+      (click)="hidePassword()"
+    >Hide</label>
+  </div>
+  <input
+    [type]="nativeType"
+    [id]="label"
+    [placeholder]="placeholder"
+    class="form-input"
+  />
+  <label
+    *ngIf="footerTemplate"
+    [ngStyle]="{ textAlign: footerAlign }"
+    class="form-footer"
+  >
+    <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+  </label>
+</div>

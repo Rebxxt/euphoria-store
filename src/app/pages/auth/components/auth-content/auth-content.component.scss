@@ -1,0 +1,43 @@
+:host {
+  font-family: Causten, sans-serif;
+
+  .auth-content__router {
+    height: 100%;
+  }
+  .debug {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.auth {
+  display: grid;
+  gap: 1em;
+
+  &-title, &-description {
+    color: black;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-title {
+    font-size: 34px;
+  }
+
+  &-description {
+    font-size: 16px;
+
+    p {
+      margin: 8px 0;
+    }
+  }
+
+  &-container {
+    margin: 2em 0;
+  }
+
+  &-action {
+    color: #8A33FD;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="debug">
+  <button (click)="next()">next</button>
+  <button (click)="changePage = !changePage">changePage</button>
+</div>
+
+<div class="auth-content__router" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+

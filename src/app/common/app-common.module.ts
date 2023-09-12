@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CurrentHeaderComponent} from "./current-header/current-header.component";
-import {AuthHeaderComponent} from "./current-header/components/auth-header/auth-header.component";
-import {StandardHeaderComponent} from "./current-header/components/standart-header/standard-header.component";
+import {CurrentHeaderOldComponent} from "./current-header-old/current-header-old.component";
+import {AuthHeaderComponent} from "./current-header-old/components/auth-header/auth-header.component";
+import {StandardHeaderComponent} from "./current-header-old/components/standart-header/standard-header.component";
 import {RouterLink, RouterLinkWithHref} from "@angular/router";
 import { InputSearchDirective } from './directives/input-search.directive';
-import { SearchButtonComponent } from './current-header/components/search-button/search-button.component';
+import { SearchButtonComponent } from './current-header-old/components/search-button/search-button.component';
 import { SelectComponent } from './components/select/select.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { DragButtonDirective } from './directives/drag-button.directive';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
 @NgModule({
   declarations: [
-    CurrentHeaderComponent,
+    CurrentHeaderOldComponent,
     AuthHeaderComponent,
     StandardHeaderComponent,
     InputSearchDirective,
@@ -22,9 +23,10 @@ import { DragButtonDirective } from './directives/drag-button.directive';
     SelectComponent,
     AdminPanelComponent,
     DragButtonDirective,
+    HeaderComponent,
   ],
   exports: [
-    CurrentHeaderComponent,
+    CurrentHeaderOldComponent,
     AdminPanelComponent
   ],
   imports: [

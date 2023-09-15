@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, RouterOutlet} from "@angular/router";
+import {ChildrenOutletContexts, Router, RouterOutlet} from "@angular/router";
 import {AuthPage} from "../../../../common/types/auth";
 import {values} from "lodash";
 import {animate, animateChild, group, query, style, transition, trigger} from "@angular/animations";
@@ -39,14 +39,14 @@ import {animate, animateChild, group, query, style, transition, trigger} from "@
   ]
 })
 export class AuthContentComponent implements OnInit {
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  prepareRoute() {
+    return this.childrenOutletContext.getContext('primary')?.route?.snapshot?.data['animation'];
   }
   public counter = 0;
 
   public changePage = true
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private childrenOutletContext: ChildrenOutletContexts) { }
 
   ngOnInit(): void {
   }

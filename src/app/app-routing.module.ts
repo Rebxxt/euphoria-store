@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {Header} from "./common/components/header/header";
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/home/home/home.module').then(m => m.HomeModule)
-  },
-  {
-    path: 'auth-old',
-    loadChildren: () => import('./pages/auth-old/auth/auth-old.module').then(m => m.AuthOldModule)
+    loadChildren: () => import('./pages/home/home/home.module').then(m => m.HomeModule),
+    data: { header: Header.DEFAULT }
   },
   {
     path: 'auth',
-    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule),
+    data: { header: Header.AUTH }
   }
 ];
 

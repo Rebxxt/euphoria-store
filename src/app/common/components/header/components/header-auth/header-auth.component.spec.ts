@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignInOldComponent } from './sign-in-old.component';
+import { HeaderAuthComponent } from './header-auth.component';
 
-describe('SignInComponent', () => {
-  let component: SignInOldComponent;
-  let fixture: ComponentFixture<SignInOldComponent>;
+describe('HeaderAuthComponent', () => {
+  let component: HeaderAuthComponent;
+  let fixture: ComponentFixture<HeaderAuthComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignInOldComponent ]
+      declarations: [ HeaderAuthComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SignInOldComponent);
+    fixture = TestBed.createComponent(HeaderAuthComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

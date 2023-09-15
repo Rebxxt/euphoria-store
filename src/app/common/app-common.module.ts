@@ -10,6 +10,8 @@ import { SelectComponent } from './components/select/select.component';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { DragButtonDirective } from './directives/drag-button.directive';
 import { HeaderComponent } from './components/header/header.component';
+import { HeaderAuthComponent } from './components/header/components/header-auth/header-auth.component';
+import { HeaderDefaultComponent } from './components/header/components/header-default/header-default.component';
 
 
 
@@ -24,10 +26,13 @@ import { HeaderComponent } from './components/header/header.component';
     AdminPanelComponent,
     DragButtonDirective,
     HeaderComponent,
+    HeaderAuthComponent,
+    HeaderDefaultComponent,
   ],
   exports: [
     CurrentHeaderOldComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

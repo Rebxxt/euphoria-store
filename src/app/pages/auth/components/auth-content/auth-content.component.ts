@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ChildrenOutletContexts, Router, RouterOutlet} from "@angular/router";
-import {AuthPage} from "../../../../common/types/auth";
-import {values} from "lodash";
-import {animate, animateChild, group, query, style, transition, trigger} from "@angular/animations";
+import { ChildrenOutletContexts, Router } from '@angular/router';
+import { AuthPage } from '../../../../common/types/auth';
+import { values } from 'lodash';
+import { animate, animateChild, group, query, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-auth-content',
@@ -40,7 +40,7 @@ import {animate, animateChild, group, query, style, transition, trigger} from "@
 })
 export class AuthContentComponent implements OnInit {
   prepareRoute() {
-    return this.childrenOutletContext.getContext('primary')?.route?.snapshot?.data['animation'];
+    return this.childrenOutletContext.getContext('primary')?.route?.snapshot?.data[ 'animation' ];
   }
   public counter = 0;
 
@@ -53,6 +53,6 @@ export class AuthContentComponent implements OnInit {
 
   next() {
     const authValues = values(AuthPage)
-    this.router.navigate(['auth', authValues[this.counter++ % authValues.length]])
+    this.router.navigate(['auth', authValues[ this.counter++ % authValues.length ]])
   }
 }

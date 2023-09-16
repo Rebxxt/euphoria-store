@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {RouterOutlet} from "@angular/router";
-import {AppRoutingModule} from "./app-routing.module";
-import {CommonModule} from "@angular/common";
-import {AppCommonModule} from "./common/app-common.module";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {StoreModule} from "@ngrx/store";
-import {headerReducer} from "./store/reducer/header.reducer";
+import { RouterOutlet } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
+import { AppCommonModule } from './common/app-common.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { headerReducer } from './store/reducer/header.reducer';
 
 @NgModule({
   declarations: [

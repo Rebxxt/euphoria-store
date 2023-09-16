@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, TemplateRef} from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 
 export type InputType = 'email' | 'password' | 'text'
 

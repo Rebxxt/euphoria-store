@@ -1,4 +1,4 @@
-import {Directive, HostBinding, Input} from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appAuthButton]'
@@ -12,7 +12,7 @@ export class AuthButtonDirective {
       this.border = 'none'
       this.color = 'white'
     }
-  };
+  }
 
   @HostBinding('style.display')
   public display: string = 'block';

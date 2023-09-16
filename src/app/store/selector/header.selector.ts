@@ -1,7 +1,8 @@
-import {createSelector} from "@ngrx/store";
-import {HeaderState} from "../reducer/header.reducer";
+import { createSelector } from '@ngrx/store';
+import { HeaderState } from '../reducer/header.reducer';
+import { AppState } from '../state/app.state';
 
-const headerState = (state: any) => state.header;
+const headerState = (state: AppState) => state.header;
 
 export const headerSelector = createSelector(
   headerState,

@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Event, NavigationEnd, Router} from "@angular/router";
-import {filter} from "rxjs";
-import {AuthPage} from "../../../../types/auth";
+import { Component, OnInit } from '@angular/core';
+import { Event, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
+import { AuthPage } from '../../../../types/auth';
 
 @Component({
   selector: 'app-header-auth',

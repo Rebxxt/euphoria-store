@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AuthComponent} from "./auth.component";
-import {AuthPage} from "../../common/types/auth";
-import {SignInComponent} from "./components/auth-content/components/sign-in/sign-in.component";
-import {SignUpComponent} from "./components/auth-content/components/sign-up/sign-up.component";
-import {VerificationComponent} from "./components/auth-content/components/verification/verification.component";
-import {ResetPasswordComponent} from "./components/auth-content/components/reset-password/reset-password.component";
-import {CheckEmailComponent} from "./components/auth-content/components/check-email/check-email.component";
-import {CreatePasswordComponent} from "./components/auth-content/components/create-password/create-password.component";
-import {Header} from "../../common/components/header/header";
+import { AuthComponent } from './auth.component';
+import { AuthPage } from '../../common/types/auth';
+import { SignInComponent } from './components/auth-content/components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/auth-content/components/sign-up/sign-up.component';
+import { VerificationComponent } from './components/auth-content/components/verification/verification.component';
+import { ResetPasswordComponent } from './components/auth-content/components/reset-password/reset-password.component';
+import { CheckEmailComponent } from './components/auth-content/components/check-email/check-email.component';
+import { CreatePasswordComponent } from './components/auth-content/components/create-password/create-password.component';
+import { Header } from '../../common/components/header/header';
 
 const routes: Routes = [
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: AuthPage.SIGN_IN,
-        pathMatch: "full",
+        pathMatch: 'full',
       },
       {
         path: AuthPage.SIGN_IN,

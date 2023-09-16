@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CurrentHeaderOldComponent} from "./current-header-old/current-header-old.component";
-import {AuthHeaderComponent} from "./current-header-old/components/auth-header/auth-header.component";
-import {StandardHeaderComponent} from "./current-header-old/components/standart-header/standard-header.component";
-import { RouterLink } from "@angular/router";
+import { CurrentHeaderOldComponent } from './current-header-old/current-header-old.component';
+import { AuthHeaderComponent } from './current-header-old/components/auth-header/auth-header.component';
+import { StandardHeaderComponent } from './current-header-old/components/standart-header/standard-header.component';
+import { RouterLink } from '@angular/router';
 import { InputSearchDirective } from './directives/input-search.directive';
 import { SearchButtonComponent } from './current-header-old/components/search-button/search-button.component';
 import { SelectComponent } from './components/select/select.component';

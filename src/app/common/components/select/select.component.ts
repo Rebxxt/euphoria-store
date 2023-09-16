@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 export interface SelectItem {
   key: string;
@@ -20,7 +20,7 @@ export class SelectComponent implements OnInit {
     }
   ]
 
-  public selectedItem: SelectItem = this.list[0];
+  public selectedItem: SelectItem = this.list[ 0 ];
 
   constructor() { }
 

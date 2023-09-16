@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthPage} from "../../../../common/types/auth";
-import {ActivatedRoute, Event, NavigationEnd, Router} from "@angular/router";
-import {BehaviorSubject, debounce, filter, interval, of, Subject, timer} from "rxjs";
-import {values} from "lodash";
-import {animate, state, style, transition, trigger} from "@angular/animations";
+import { AuthPage } from '../../../../common/types/auth';
+import { Event, NavigationEnd, Router } from '@angular/router';
+import { debounce, filter, Subject, timer } from 'rxjs';
+import { values } from 'lodash';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 type AuthPicPage = Partial<Record<AuthPage, string>>
 type AuthPicStylePage = Partial<Record<AuthPage, Record<string, string>>>
@@ -34,7 +34,7 @@ export class AuthPicComponent implements OnInit {
   }
 
   public set currentPage(url) {
-    const endUrl: any = this.getUrlEndless(url as string)
+    const endUrl: AuthPage = this.getUrlEndless(url as string) as AuthPage
     if (values(AuthPage).includes(endUrl)) {
       this._currentPage = endUrl;
     } else {
@@ -45,47 +45,47 @@ export class AuthPicComponent implements OnInit {
   public _currentPage?: AuthPage;
 
   public pics: AuthPicPage = {
-    [AuthPage.SIGN_IN]: 'shop1.jpeg',
-    [AuthPage.SIGN_UP]: 'shop2.jpeg',
-    [AuthPage.RESET_PASSWORD]: 'shop3.jpeg',
-    [AuthPage.CHECK_EMAIL]: 'shop4.jpeg',
-    [AuthPage.VERIFICATION]: 'shop5.jpeg',
-    [AuthPage.CREATE_PASSWORD]: 'shop6.jpeg',
+    [ AuthPage.SIGN_IN ]: 'shop1.jpeg',
+    [ AuthPage.SIGN_UP ]: 'shop2.jpeg',
+    [ AuthPage.RESET_PASSWORD ]: 'shop3.jpeg',
+    [ AuthPage.CHECK_EMAIL ]: 'shop4.jpeg',
+    [ AuthPage.VERIFICATION ]: 'shop5.jpeg',
+    [ AuthPage.CREATE_PASSWORD ]: 'shop6.jpeg',
   }
 
   public picStyles: AuthPicStylePage = {
-    [AuthPage.SIGN_IN]: {
-      'background-image': `url("/assets/pics/shop1.jpeg")`,
+    [ AuthPage.SIGN_IN ]: {
+      'background-image': 'url("/assets/pics/shop1.jpeg")',
       'background-position': '40% 25%',
       'background-size': 'auto 115%',
       'background-repeat': 'no-repeat',
     },
-    [AuthPage.SIGN_UP]: {
-      'background-image': `url("/assets/pics/shop2.jpeg")`,
+    [ AuthPage.SIGN_UP ]: {
+      'background-image': 'url("/assets/pics/shop2.jpeg")',
       'background-position': '50% 0',
       'background-size': '130% auto',
       'background-repeat': 'no-repeat',
     },
-    [AuthPage.RESET_PASSWORD]: {
-      'background-image': `url("/assets/pics/shop3.jpeg")`,
+    [ AuthPage.RESET_PASSWORD ]: {
+      'background-image': 'url("/assets/pics/shop3.jpeg")',
       'background-position': '50% 0',
       'background-size': 'auto 115%',
       'background-repeat': 'no-repeat',
     },
-    [AuthPage.CHECK_EMAIL]: {
-      'background-image': `url("/assets/pics/shop4.jpeg")`,
+    [ AuthPage.CHECK_EMAIL ]: {
+      'background-image': 'url("/assets/pics/shop4.jpeg")',
       'background-position': '30% 0',
       'background-size': 'auto 115%',
       'background-repeat': 'no-repeat',
     },
-    [AuthPage.VERIFICATION]: {
-      'background-image': `url("/assets/pics/shop5.jpeg")`,
+    [ AuthPage.VERIFICATION ]: {
+      'background-image': 'url("/assets/pics/shop5.jpeg")',
       'background-position': '50% 25%',
       'background-size': 'auto 115%',
       'background-repeat': 'no-repeat',
     },
-    [AuthPage.CREATE_PASSWORD]: {
-      'background-image': `url("/assets/pics/shop6.jpeg")`,
+    [ AuthPage.CREATE_PASSWORD ]: {
+      'background-image': 'url("/assets/pics/shop6.jpeg")',
       'background-position': '50% 10%',
       'background-size': '130% auto',
       'background-repeat': 'no-repeat',
@@ -96,7 +96,7 @@ export class AuthPicComponent implements OnInit {
 
   public get pageStyles() {
     if (this.currentPage) {
-      return this.picStyles[this.currentPage]
+      return this.picStyles[ this.currentPage ]
     }
     return {}
   }
@@ -135,13 +135,13 @@ export class AuthPicComponent implements OnInit {
   }
 
   private setCurrentPage(url: string) {
-    const endUrl: any = this.getUrlEndless(url)
+    const endUrl: AuthPage = this.getUrlEndless(url) as AuthPage
     if (values(AuthPage).includes(endUrl)) {
       this.currentPage = endUrl
     }
   }
 
   private getUrlEndless(url: string) {
-    return url.split('/').slice(-1)[0]
+    return url.split('/').slice(-1)[ 0 ]
   }
 }

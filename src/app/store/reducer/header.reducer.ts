@@ -1,5 +1,5 @@
-import {Action, createReducer, on} from '@ngrx/store';
-import {setHeader} from "../action/header.action";
+import { Action, createReducer, on } from '@ngrx/store';
+import { setHeader } from '../action/header.action';
 
 export interface HeaderState {
   header: string;

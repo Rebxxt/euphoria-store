@@ -1,19 +1,30 @@
-import {Directive, ElementRef, OnInit, Renderer2, ViewContainerRef} from '@angular/core';
+import { Directive, HostBinding, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appInputSearch]',
-  host: {
-    '[style.border-radius]': '"4px"',
-    '[style.border]': '"none"',
-    '[style.background-color]': '"#F6F6F6"',
-    '[style.padding]': '"12px 24px"',
-    '[style.font-size]': '"18px"',
-    '[placeholder]': "'Search'"
-  }
 })
 export class InputSearchDirective implements OnInit {
 
-  constructor(private elementRef: ElementRef, private vc: ViewContainerRef) {}
+  @HostBinding()
+  public borderRadius = '4px'
+
+  @HostBinding()
+  public border = 'none'
+
+  @HostBinding()
+  public backgroundColor = '#F6F6F6'
+
+  @HostBinding()
+  public padding = '12px 24px'
+
+  @HostBinding()
+  public fontSize = '18px'
+
+  @HostBinding()
+  public placeholder = 'Search'
+
+
+  constructor() {}
 
   public ngOnInit() {
   }

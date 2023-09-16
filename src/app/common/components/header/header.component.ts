@@ -1,7 +1,6 @@
-import {AfterViewInit, Component, OnInit, TemplateRef, ViewChild, ViewChildren, ViewContainerRef} from '@angular/core';
-import {ActivatedRoute, Data, Router, RoutesRecognized} from "@angular/router";
-import {filter} from "rxjs";
-import {Header, headerByType} from "./header";
+import { Component, OnInit, Type, ViewChild, ViewContainerRef } from '@angular/core';
+import { Data, Router, RoutesRecognized } from '@angular/router';
+import { Header, headerByType } from './header';
 
 @Component({
   selector: 'app-header',
@@ -10,14 +9,14 @@ import {Header, headerByType} from "./header";
 })
 export class HeaderComponent implements OnInit {
 
-  @ViewChild('content', { read: ViewContainerRef})
+  @ViewChild('content', { read: ViewContainerRef })
   public content!: ViewContainerRef
 
   public routeData?: Data = {};
 
-  public currentHeader?: any
+  public currentHeader?: Type<Component>
 
-  constructor(private router: Router, private viewContainerRef: ViewContainerRef) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.initRouteData();
@@ -27,18 +26,14 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
         this.routeData = data.state.root.firstChild?.data;
-        const header: Header = this.routeData?.['header'];
+        const header: Header = this.routeData?.[ 'header' ];
         if (header && header in headerByType) {
-          this.currentHeader = headerByType[header]
+          this.currentHeader = headerByType[ header ]
           this.content.clear()
-          this.content.createComponent(this.currentHeader);
+          this.content.createComponent(headerByType[ header ]);
         }
       }
     });
-  }
-
-  private chooseHeader() {
-
   }
 
 }

@@ -1,4 +1,4 @@
-import { distributeHeaderReducer } from "./header.reducer";
+import { distributeHeaderReducer } from './header.reducer';
 
 export const appReducer = {
   header: distributeHeaderReducer

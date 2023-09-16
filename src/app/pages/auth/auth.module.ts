@@ -35,7 +35,7 @@ import { AuthCheckboxComponent } from './components/auth-content/common/auth-che
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
   ]
 })
 export class AuthModule { }

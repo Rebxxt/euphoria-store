@@ -7,6 +7,8 @@ import {AppRoutingModule} from "./app-routing.module";
 import {CommonModule} from "@angular/common";
 import {AppCommonModule} from "./common/app-common.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {StoreModule} from "@ngrx/store";
+import {headerReducer} from "./store/reducer/header.reducer";
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     CommonModule,
     AppCommonModule,
+    StoreModule.forRoot({ header: headerReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent]
